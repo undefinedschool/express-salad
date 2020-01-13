@@ -5,8 +5,14 @@ Ejercicio integrador de todos los conceptos vistos de `ExpressJS`
 ## Enunciado
 
 - Utilizar [`express-generator`](http://expressjs.com/en/starter/generator.html) para generar el _scaffolding_ del proyecto
+
+```bash
+npx express-generator --git express-salad
+```
+
 - Crear una aplicación con `Express`, que tenga al archivo `app.js` como _entrypoint_ y escuche en el puerto `9001` (leerlo del archivo `.env`). En el caso de que no haya un puerto seteado en `.env`, la aplicación debe escuchar en el puerto `8001`. Cuando el servidor esté levantado, loguear el mensaje `Server listening on http://${HOSTNAME}:${PORT}`, donde `HOSTNAME` es otra variable de entorno con el valor `localhost`.
-- Los _assets_ (archivos estáticos) deben estar ubicados en la carpeta `/assets` y se debe utilizar el middleware `static` para servirlos.  
+- Todos los _assets_ (archivos estáticos) estarán ubicados dentro de `/public` (y sus sibdirectorios). Se debe utilizar el middleware `express.static(PATH)` para servirlos.
+- Las imágenes deben estar ubicadas en la carpeta `/public/images`.  
 - Probar los endpoints con _Postman_. 
 - Utilizar el middleware [`body-parser`](https://www.npmjs.com/package/body-parser) para parsear los requests que envíen `JSON`
 - `app.js` debe contar con las rutas definidas a continuación (**la lógica de _routing_ debe estar separada, utilizando el `Router` de Express**), definidas en `/routes/index.js` e importadas y utilizadas desde `app.js`.
