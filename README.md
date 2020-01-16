@@ -11,7 +11,7 @@ npx express-generator --git express-salad
 ```
 
 - Crear una aplicación con `Express`, que tenga al archivo `app.js` como _entrypoint_ y escuche en el puerto `9001` (leerlo del archivo `.env`). En el caso de que no haya un puerto seteado en `.env`, la aplicación debe escuchar en el puerto `8001`. Cuando el servidor esté levantado, loguear el mensaje `Server listening on http://${HOSTNAME}:${PORT}`, donde `HOSTNAME` es otra variable de entorno con el valor `localhost`.
-- Todos los _assets_ (archivos estáticos) estarán ubicados dentro de `/public` (y sus sibdirectorios). Se debe utilizar el middleware `express.static(PATH)` para servirlos.
+- Todos los _assets_ (archivos estáticos) estarán ubicados dentro de `/public` (y sus subdirectorios). Se debe utilizar el middleware `express.static(PATH)` para servirlos.
 - Las imágenes deben estar ubicadas en la carpeta `/public/images`.  
 - Probar los endpoints con _Postman_. 
 - Utilizar el middleware [`body-parser`](https://www.npmjs.com/package/body-parser) para parsear los requests que envíen `JSON`
