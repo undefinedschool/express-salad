@@ -18,7 +18,6 @@ npx express-generator --git express-salad
 - `app.js` debe contar con las rutas definidas a continuación (**la lógica de _routing_ debe estar separada, utilizando el `Router` de Express**), definidas en `/routes/index.js` e importadas y utilizadas desde `app.js`.
 - Utilizar el método [`route()`](http://expressjs.com/en/4x/api.html#router.route) del `Router`, para definir las rutas de una forma más declarativa. 
 - En caso de necesitar _debuggear_ la aplicación, utilizar [esta guía](https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad).
-- //TODO: agregar `helmet.js`
 
 ### Rutas
 
