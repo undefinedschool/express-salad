@@ -48,11 +48,11 @@ npx express-generator --git express-salad
 
 - `PUT /users/:id` permite editar los campos `name`, `email` o `age` del usuario con el `id` correspondiente (el `id` no puede editarse). Si el `id` utilizado como parámetro no corresponde con ningún usuario, generar el mismo error anterior.
 - `DELETE /users/:id` permite eliminar el usuario de `users`, con el `id` correspondiente. Si el `id` utilizado como parámetro no corresponde con ningún usuario, generar el mismo error anterior.
-- Agregar el middleware [`morgan`](https://www.npmjs.com/package/morgan) para loguear en la terminal todos los _requests_ y _responses_ generados
 - `GET /html/:name/:color`: `name` y `color` son parámetros que representan un nombre y un color, respectivamente. 
   - Responder con el [siguiente HTML](https://gist.githubusercontent.com/nhsz/5d4d9c339e99ad565116ddc8de0bb199/raw/25277d382208e3aa335d24b3b1888364084b015a/index.html), en un archivo `index.html`, generado con [`Pug`](https://pugjs.org/). Si el color recibido es `red` ó `blue`, el html debe tener un `background-color: red` ó `background-color: blue`, respectivamente. Este CSS debe estar definido en un archivo `styles.css`. Tanto el `index.html` como el `styles.css` deberán ser servidos estáticamente desde la carpeta `/public`.
 - `GET /google`: redirigir a `https://google.com`, con un status code `301`.
-- `POST /series`: el `body` del request será el siguiente [`JSON`](http://api.tvmaze.com/singlesearch/shows?q=mr-robot&embed=episodes).   - Retornar un `JSON` con la siguiente info, procesada y extraída a partir del request: 
+- `POST /series`: el `body` del request será el siguiente [`JSON`](http://api.tvmaze.com/singlesearch/shows?q=mr-robot&embed=episodes).   
+- Retornar un `JSON` con la siguiente info, procesada y extraída a partir del request: 
 
 ```json
 { 
