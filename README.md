@@ -50,7 +50,7 @@ npx express-generator --git express-salad
   - Responder con el [siguiente HTML](https://gist.githubusercontent.com/nhsz/5d4d9c339e99ad565116ddc8de0bb199/raw/25277d382208e3aa335d24b3b1888364084b015a/index.html), en un archivo `index.html`, generado con [`Pug`](https://pugjs.org/). Si el color recibido es `red` ó `blue`, el html debe tener un `background-color: red` ó `background-color: blue`, respectivamente. Este CSS debe estar definido en un archivo `styles.css`. Tanto el `index.html` como el `styles.css` deberán ser servidos estáticamente desde la carpeta `/public`.
 - `GET /google`: redirigir a `https://google.com`, con un status code `301`.
 - `POST /series`: el `body` del request será [el siguiente `JSON`](http://api.tvmaze.com/singlesearch/shows?q=mr-robot&embed=episodes).   
-- Retornar un `JSON` con la siguiente info, procesada y extraída a partir del request: 
+  - Retornar un `JSON` con la siguiente info, procesada y extraída a partir del request: 
 
 ```json
 { 
